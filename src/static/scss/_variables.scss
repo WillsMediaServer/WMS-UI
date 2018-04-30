@@ -1,0 +1,55 @@
+//
+// _variables.scss
+// Wills Media Server
+// User Interface
+// Version: 0.0.1
+// UNRELEASED
+//
+
+//
+// Colours
+//
+
+$colour-change: 10;
+
+$white: #fff;
+
+$gray: #dcdcdc;
+$lgray: lighten($gray, $colour-change);
+$dgray: darken($gray, $colour-change);
+
+$blue: #5bc0eb;
+$lblue: lighten($blue, $colour-change);
+$dblue: darken($blue, $colour-change);
+
+$yellow: #fde74c;
+$lyellow: lighten($yellow, $colour-change);
+$dyellow: darken($yellow, $colour-change);
+
+$green: #9bc53d;
+$lgreen: lighten($green, $colour-change);
+$dgreen: darken($green, $colour-change);
+
+$orange: #fa7921;
+$lorange: lighten($orange, $colour-change);
+$dorange: darken($orange, $colour-change);
+
+$red: #e55934;
+$lred: lighten($red, $colour-change);
+$dred: darken($red, $colour-change);
+
+$lblack: #333;
+
+// Main UI Colours
+
+$ui-nav: $blue;
+$ui-nav-dark: $dblue;
+$ui-body: $lgray;
+$ui-text: $lblack;
+
+//
+// Typography
+//
+
+$font-size: 20px; // == 1rem
+$title: 3rem;

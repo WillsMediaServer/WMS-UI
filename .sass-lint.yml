@@ -1,0 +1,4 @@
+files:
+  include:
+    - 'src/static/scss/*.scss'
+    - 'src/static/scss/**/*.scss'

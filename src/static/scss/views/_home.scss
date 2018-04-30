@@ -1,0 +1,9 @@
+.section {
+  background-color: transparent;
+  padding: .5em;
+  text-align: center;
+
+  &:nth-child(odd) {
+    background-color: $gray;
+  }
+}

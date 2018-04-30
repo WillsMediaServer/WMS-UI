@@ -1,0 +1,29 @@
+.btn {
+  display: inline-block;
+  margin: .5rem;
+  text-decoration: none;
+
+  &.btn-info {
+    background-color: $blue;
+    color: $white;
+    padding: 1rem;
+
+    &:hover,
+    &:active {
+      background-color: $dblue;
+      cursor: pointer;
+    }
+  }
+
+  &.btn-success {
+    background-color: $green;
+    color: $white;
+    padding: 1rem;
+
+    &:hover,
+    &:active {
+      background-color: $dgreen;
+      cursor: pointer;
+    }
+  }
+}
