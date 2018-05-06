@@ -7,6 +7,7 @@ const CssLoader = require('css-loader');
 
 module.exports = {
   entry: './src/index.js',
+  mode: 'production',
   output: {
     path: path.resolve(__dirname, '..', 'build'),
     publicPath: '/',
