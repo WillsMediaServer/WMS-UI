@@ -26,6 +26,12 @@ export const Login = Loadable({
   loading: () => Loading,
 });
 
+// Music Views
+export const Music = Loadable({
+  loader: () => import(musicPath + 'Music'),
+  loading: () => Loading,
+});
+
 // Error Views
 
 export const Error404 = Loadable({

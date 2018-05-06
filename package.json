@@ -5,7 +5,7 @@
   "description": "Wills Media Server User Interface",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --config ./config/webpack.config.dev.js --mode development",
+    "start": "webpack-dev-server --open --config ./config/webpack.config.dev.js --mode development --port 80",
     "build": "node scripts/build.js"
   },
   "author": "wneild5",
@@ -16,7 +16,8 @@
     "react-helmet": "^5.2.0",
     "react-loadable": "^5.4.0",
     "react-router-dom": "^4.2.2",
-    "react-router-hooks": "^1.0.1"
+    "react-router-hooks": "^1.0.1",
+    "request": "^2.85.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
