@@ -11,6 +11,6 @@ const compiler = webpack(webpackProductionConfig, (errors, stats) => {
   if (errors) { console.error(errors); return }
   console.log(stats.toString({ chunks: false, colors: true }));
   // Copy images to build
-  fsextra.copySync('src/static/img', 'build/static/img')
-  fsextra.copySync('src/static/manifests', 'build/static/manifests')
+  fsextra.copySync('src/static/img', 'build/assets/img')
+  fsextra.copySync('src/static/manifests', 'build/assets/manifests')
 });

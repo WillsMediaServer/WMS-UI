@@ -11,8 +11,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '..', 'build'),
     publicPath: '/',
-    filename: 'static/js/[name].[chunkhash:8].js',
-    chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js'
+    filename: 'assets/js/[name].[chunkhash:8].js',
+    chunkFilename: 'assets/js/[name].[chunkhash:8].chunk.js'
   },
   resolve: {
     extensions: ['.web.js', '.mjs', '.js', '.json', '.web.jsx', '.jsx'],
@@ -79,7 +79,7 @@ module.exports = {
       }
     }),
     new ExtractTextPlugin({
-      filename: 'static/css/bundle.css'
+      filename: 'assets/css/bundle.css'
     }),
     new UglifyJsPlugin({
       parallel: 4,
