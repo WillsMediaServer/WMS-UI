@@ -1,6 +1,11 @@
 {
-  "presets": ["env", "react"],
+  "presets": [
+    "env",
+    "react"
+  ],
   "plugins": [
+    "transform-runtime",
+    "transform-async-to-generator",
     "syntax-dynamic-import"
   ]
 }

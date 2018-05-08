@@ -14,7 +14,8 @@ ReactDOM.render((
       <Route exact path="/" component={Routes.Home} />
       <Route path="/register" component={Routes.Register} />
       <Route path="/login" component={Routes.Login} />
-      <Route path="/music" component={Routes.Music} />
+      <Route exact path="/music" component={Routes.Music} />
+      <Route exact path="/music/song/:id" component={Routes.PlaySong} />
       <Route component={Routes.Error404} />
     </Switch>
   </HashRouter>

@@ -5,25 +5,26 @@
   "description": "Wills Media Server User Interface",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --config ./config/webpack.config.dev.js --mode development --port 80",
+    "start": "webpack-dev-server --open --config ./config/webpack.config.dev.js --mode development --port 8080",
     "build": "node scripts/build.js"
   },
   "author": "wneild5",
   "license": "UNLICENSED",
   "dependencies": {
+    "got": "^8.3.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-helmet": "^5.2.0",
     "react-loadable": "^5.4.0",
-    "react-router-dom": "^4.2.2",
-    "react-router-hooks": "^1.0.1",
-    "request": "^2.85.0"
+    "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react-app": "^3.1.1",
+    "babel-regenerator-runtime": "^6.5.0",
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "fs-extra": "^5.0.0",

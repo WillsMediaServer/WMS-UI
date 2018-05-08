@@ -32,6 +32,11 @@ export const Music = Loadable({
   loading: () => Loading,
 });
 
+export const PlaySong = Loadable({
+  loader: () => import(musicPath + 'PlaySong'),
+  loading: () => Loading,
+});
+
 // Error Views
 
 export const Error404 = Loadable({

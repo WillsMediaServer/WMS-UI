@@ -6,7 +6,7 @@ class Navigation extends Component {
     return (
       <nav className="navigation">
         <NavLink exact to="/" className="nav-item">Home</NavLink>
-        <NavLink to="/music" className="nav-item">Music</NavLink>
+        <NavLink exact to="/music" className="nav-item">Music</NavLink>
         <NavLink to="/films" className="nav-item">Films</NavLink>
         <NavLink to="/tv" className="nav-item">TV Shows</NavLink>
       </nav>
