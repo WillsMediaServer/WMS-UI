@@ -1,87 +1,122 @@
 .music-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 .square {
-  border: 1px solid $black;
-  box-sizing: border-box;
+  background-color: $white;
+  display: inline-block;
   filter: brightness(100%);
-  flex-basis: calc(33.333% - 10px);
-  margin: 5px;
+  margin: calc(#{$square-margin} / 2);
+  padding-bottom: calc(100% - #{$square-margin});
   position: relative;
+  text-align: center;
+  width: calc(100% - #{$square-margin});
 
   &:hover {
     .background {
-      filter: brightness(70%);
-      transition: opacity .5s, filter .5s;
-    }
-
-    .details {
-      opacity: 0;
-      transition: opacity .5s, filter .5s;
+      filter: brightness(75%);
     }
 
     .more {
       opacity: 1;
-      transition: opacity .5s, filter .5s;
+      transition: opacity $timing-hover-opacity, filter $timing-hover-filter;
     }
-  }
 
-  &::before {
-    content: '';
-    display: block;
-    padding-top: 100%;
+    .details {
+      opacity: 0;
+      transition: opacity $timing-hover-opacity, filter $timing-hover-filter;
+    }
   }
 
   .background,
   .details,
   .more {
+    display: block;
     height: 100%;
     left: 0;
     position: absolute;
-    text-align: center;
     top: 0;
-    transition: opacity .5s, filter .5s;
+    transition: opacity $timing-hover-opacity, filter $timing-hover-filter;
     width: 100%;
   }
 
   .background {
-    background-origin: content-box;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .details {
-    opacity: 1;
-
-    p {
-      margin: 5px;
-    }
+    -webkit-font-smoothing: antialiased;
+    color: $white;
+    text-align: center;
+    text-shadow:
+    $black 0 0 2px,
+    $black 0 0 2px,
+    $black 0 0 2px,
+    $black 0 0 2px,;
 
     .song {
+      font-size: 1.5rem;
       font-weight: bold;
+      padding: 1rem;
     }
 
     .artist {
+      font-size: 1.2rem;
       font-weight: lighter;
     }
   }
 
   .more {
+    display: block;
     opacity: 0;
+
+    .play-button {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 75%;
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 
-.play-button {
-  background-color: transparent;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  cursor: pointer;
-  display: block;
-  height: 70%;
-  margin: 15%;
-  width: 70%;
+@media screen and (min-width: 40rem) {
+  .square {
+    padding-bottom: calc((100% / 2) - #{$square-margin});
+    width: calc((100% / 2) - #{$square-margin});
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  .square {
+    padding-bottom: calc((100% / 3) - #{$square-margin});
+    width: calc((100% / 3) - #{$square-margin});
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .square {
+    padding-bottom: calc((100% / 4) - #{$square-margin});
+    width: calc((100% / 4) - #{$square-margin});
+  }
+}
+
+@media screen and (min-width: 100rem) {
+  .square {
+    padding-bottom: calc((100% / 5) - #{$square-margin});
+    width: calc((100% / 5) - #{$square-margin});
+  }
+}
+
+@media screen and (min-width: 120rem) {
+  .square {
+    padding-bottom: calc((100% / 6) - #{$square-margin});
+    width: calc((100% / 6) - #{$square-margin});
+  }
 }
