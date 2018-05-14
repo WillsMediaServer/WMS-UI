@@ -40,7 +40,7 @@ class PlaySong extends React.Component {
 
   render() {
     const { song, isLoading, error } = this.state;
-    const songUrl = window.location.protocol + "//" + window.location.hostname + "/media/song/" + song.id;
+    const songUrl = window.location.protocol + "//" + window.location.hostname + "/media/song/" + song.id + "?format=mp3";
 
     if (error) {
       return <p>{ error.message }</p>;
