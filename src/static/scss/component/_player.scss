@@ -1,0 +1,126 @@
+.player {
+  background-color: $blue;
+  bottom: 0;
+  display: flex;
+  height: $player-height;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+.player-controls {
+  display: inline-block;
+  flex-grow: 1;
+  float: left;
+
+  .player-buttons,
+  .player-timeline {
+    width: 100%;
+  }
+
+  .player-timeline {
+    span {
+      color: $white;
+      display: inline-block;
+      text-align: center;
+      width: 10%;
+    }
+
+    progress {
+      display: inline-block;
+      width: 80%;
+    }
+  }
+
+}
+
+.player-button {
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  filter: invert(95%);
+  height: $player-button-size;
+  margin: .1rem;
+  width: $player-button-size;
+
+  &:hover {
+    background-size: 55%;
+  }
+
+  &.play,
+  &.pause {
+    height: calc(#{$player-button-size} * 1.4);
+    width: calc(#{$player-button-size} * 1.4);
+  }
+
+  &.play {
+    background-image: url('http://wneild-pc/assets/img/buttons/play.svg');
+  }
+
+  &.pause {
+    background-image: url('http://wneild-pc/assets/img/buttons/pause.svg');
+  }
+
+  &.shuffle {
+    background-image: url('http://wneild-pc/assets/img/buttons/random.svg');
+  }
+
+  &.next {
+    background-image: url('http://wneild-pc/assets/img/buttons/step-forward.svg');
+  }
+
+  &.prev {
+    background-image: url('http://wneild-pc/assets/img/buttons/step-backward.svg');
+  }
+
+  &.repeat {
+    background-image: url('http://wneild-pc/assets/img/buttons/redo-alt.svg');
+  }
+
+}
+
+.player-music-cover {
+  background-image: url("http://localhost/media/covers/1");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  float: left;
+  height: $player-height;
+  width: $player-height;
+}
+
+.player-music-details {
+  align-items: center;
+  color: $white;
+  display: inline-flex;
+  flex-direction: column;
+  float: left;
+  height: $player-height;
+  justify-content: center;
+  text-align: center;
+  width: calc(#{$player-height}*1.5);
+
+  .song-name,
+  .song-artist {
+    display: block;
+  }
+
+  .song-name {
+    font-size: 1.2rem;
+    font-weight: bolder;
+  }
+
+  .song-artist {
+    font-size: 1rem;
+    font-weight: lighter;
+  }
+
+}

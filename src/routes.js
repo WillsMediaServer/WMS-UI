@@ -8,6 +8,7 @@ const errorPath = './views/errors/';
 const musicPath = './views/music/';
 const filmsPath = './views/films/';
 const tvPath = './views/tvshows/';
+const componentPath = './components/'
 
 // Home Views
 
@@ -34,6 +35,11 @@ export const Music = Loadable({
 
 export const PlaySong = Loadable({
   loader: () => import(musicPath + 'PlaySong'),
+  loading: () => Loading,
+});
+
+export const MusicPlayer = Loadable({
+  loader: () => import(componentPath + 'MusicPlayer'),
   loading: () => Loading,
 });
 

@@ -12,7 +12,7 @@
 
 $colour-change: 10;
 
-$white: #fff;
+$white: darken(#fff, 5);
 $black: #000;
 
 $gray: #dcdcdc;
@@ -61,6 +61,8 @@ $title: 3rem;
 
 $square-margin: 1rem;
 $stroke-width: 4px;
+$player-height: 12vw;
+$player-button-size: 6vw;
 
 //
 // Animation Timings

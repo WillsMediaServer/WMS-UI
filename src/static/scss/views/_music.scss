@@ -1,6 +1,7 @@
 .music-container {
   display: block;
   margin: 0;
+  margin-bottom: $player-height;
   padding: 0;
   width: 100%;
 }
@@ -8,7 +9,7 @@
 .square {
   background-color: $white;
   display: inline-block;
-  filter: brightness(100%);
+  filter: brightness(90%);
   margin: calc(#{$square-margin} / 2);
   padding-bottom: calc(100% - #{$square-margin});
   position: relative;
